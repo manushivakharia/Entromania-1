@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="Vo.matchVo" table="CricketMatch">
+  
+  <id name="m_id" type="int" column="id" >
+   <generator class="increment"/>
+  </id>
+
+  <property name="title">
+   <column name="Title" />
+  </property>
+  
+  <property name="team1">
+   <column name="Team1" />
+  </property>
+  
+  <property name="team2">
+   <column name="Team2" />
+  </property>
+  
+  <property name="date">
+   <column name="Date" />
+  </property>
+  
+  <property name="time">
+   <column name="Timing" />
+  </property>
+  
+  <property name="m_des">
+   <column name="Description" />
+  </property>
+  
+  <many-to-one name="stadiumvo" class="Vo.stadiumVo" column="stadiumId"></many-to-one> 
+ 
+ </class>
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="Vo.sportVo" table="SportDetails">
+  
+  <id name="sportId" type="int" column="sportId" >
+   <generator class="increment"/>
+  </id>
+  <property name="sportName">
+   <column name="SportName" />
+  </property>
+  <property name="sportDescription">
+   <column name="SportDescription" />
+  </property>
+ </class>
+</hibernate-mapping>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="Vo.bookticketdetailVo" table="book_ticket_2">
+  
+  <id name="ticketdetailid" type="int" column="detailId" >
+   <generator class="increment"/>
+  </id>
+  <property name="ticketprice">
+   <column name="TicketPrice" />
+  </property>
+  <property name="noofticket">
+   <column name="NoOfTicket" />
+  </property>
+  <property name="total">
+   <column name="Total" />
+  </property>
+  <property name="counter">
+   <column name="Counter" />
+  </property>
+  
+  <property name="ticketname">
+   <column name="Ticketname" />
+  </property>
+	
+  <many-to-one name="bookticketVo" class="Vo.bookticketVo" column="bookingId"></many-to-one>
+  
+  
+ 	<many-to-one name="matchVo" class="Vo.matchVo" column="matchId"></many-to-one>
+ 	<many-to-one name="stadiumVo" class="Vo.stadiumVo" column="stadiumId"></many-to-one>
+ 	<many-to-one name="loginVo" class="Vo.LoginVo" column="loginId"></many-to-one>
+ </class>
+</hibernate-mapping>

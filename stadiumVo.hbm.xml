@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="Vo.stadiumVo" table="Stadium">
+  
+  <id name="s_id" type="int" column="id" >
+   <generator class="increment"/>
+  </id>
+
+  <property name="stadium">
+   <column name="Stadium" />
+  </property>
+  
+  <property name="capacity" type="int">
+   <column name="Capacity" />
+  </property>
+  
+  <property name="p_capacity" type="int">
+   <column name="Parking_Capacity" />
+  </property>
+  
+  <many-to-one name="cityvo" class="Vo.cityVo" column="cityId"></many-to-one> 
+  <many-to-one name="statevo" class="Vo.stateVo" column="stateId"></many-to-one> 
+ 
+ </class>
+</hibernate-mapping>
